@@ -1,0 +1,73 @@
+// Import required libraries
+const express, mongoose
+
+// Create Express application
+const app
+
+// Connect to MongoDB
+mongoose.connect('mongodb://0.0.0.0:27017/url_shortener')
+
+// Define URL schema
+const urlSchema
+
+// Create URL model
+const Url
+
+// Configure middleware to parse JSON in requests
+app.use(express.json())
+
+// Endpoint to handle URL shortening
+app.post('/shorten', async (req, res) => {
+  // Extract destination URL from request body
+
+  // Generate a short code for the URL
+
+  // Create a new URL document
+
+  // Save the URL document to the database
+
+  // Respond with the short code
+})
+
+// Endpoint to update the destination URL for a short code
+app.put('/update', async (req, res) => {
+  // Extract short code and updated destination URL from request body
+
+  // Find the URL document in the database using the short code
+
+  // If the URL document is not found, return a 404 response
+
+  // Update the destination URL and save the document
+
+  // Respond with success
+})
+
+// Endpoint to retrieve the destination URL using the short code
+app.get('/:shortCode', async (req, res) => {
+  // Extract the short code from the request parameters
+
+  // Find the URL document in the database using the short code
+
+  // If the URL document is not found, return a 404 response
+
+  // Respond with the destination URL
+})
+
+// Endpoint to update the expiry date of a short code
+app.put('/expiry', async (req, res) => {
+  // Extract short code and days to add from request body
+
+  // Find the URL document in the database using the short code
+
+  // If the URL document is not found, return a 404 response
+
+  // Update the expiry date and save the document
+
+  // Respond with success
+})
+
+// Function to generate a random short code
+function generateShortCode()
+
+// Start the server on port 3000
+app.listen(3000)
